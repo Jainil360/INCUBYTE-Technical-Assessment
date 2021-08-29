@@ -31,3 +31,7 @@ def test_ignore_larger_than_1000():
 def test_any_length_delimiter():
     assert calc.add('//***\n10***20***70\n1000') == 100
     assert calc.add('//++\n1++2++7\n10') == 20
+
+def test_multiple_delimiters():
+    assert calc.add('//+*\n1+2*7') == 10
+    assert calc.add('//+%\n1+2%7\n10') == 20

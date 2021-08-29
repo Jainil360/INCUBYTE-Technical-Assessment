@@ -10,7 +10,7 @@ def add(numbers):
 def handle_custom_delimiter(numbers):
     if numbers.startswith('//'):
         delimiterDetail,numberString = numbers.split('\n',1)
-        customDelimiter = delimiterDetail[2]
+        customDelimiter = delimiterDetail[2:]
         delimitersList = [char for char in customDelimiter]
         if (len(set(delimitersList)) == 1 ):
             numbers = numberString.replace(customDelimiter,',')

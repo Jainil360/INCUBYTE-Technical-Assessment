@@ -3,7 +3,8 @@ callCount = 0
 def add(numbers):
     global callCount 
     callCount += 1
-    if numbers == '':return 0
+    if numbers == '':
+        return 0
     else:
         numbers = map(int, re.findall(r"-?\d+", numbers))
         numbers = list(filter(lambda x: x < 1000, numbers))

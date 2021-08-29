@@ -1,2 +1,2 @@
 def add(numbers):
-    return 
+    if numbers == '':return 0

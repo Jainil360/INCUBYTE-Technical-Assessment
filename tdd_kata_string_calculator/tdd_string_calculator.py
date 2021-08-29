@@ -1,4 +1,7 @@
+callCount = 0
 def add(numbers):
+    global callCount 
+    callCount += 1
     if numbers == '':return 0
     else:
         numbers = handle_custom_delimiter(numbers)
@@ -21,3 +24,7 @@ def handle_custom_delimiter(numbers):
                numberString = numberString.replace(delimiter,',') 
             numbers = numberString
     return numbers
+
+def GetCalledCount():
+    global callCount
+    return callCount

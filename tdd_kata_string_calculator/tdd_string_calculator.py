@@ -5,6 +5,8 @@ def add(numbers):
         numbers = numbers.replace('\n',',')
         numbers = map(int, numbers.split(','))
         numbers = list(filter(lambda x: x < 1000, numbers))
+        negativeNumbers = list(filter(lambda x: x < 0, numbers))
+        if negativeNumbers: raise Exception('negatives not allowed ' + str(negativeNumbers))
     return sum(numbers)
 
 def handle_custom_delimiter(numbers):

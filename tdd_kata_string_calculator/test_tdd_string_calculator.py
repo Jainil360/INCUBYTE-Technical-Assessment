@@ -1,4 +1,5 @@
 import tdd_string_calculator as calc
+import pytest
 
 def test_empty_string():
     assert calc.add('') == 0
@@ -35,3 +36,7 @@ def test_any_length_delimiter():
 def test_multiple_delimiters():
     assert calc.add('//+*\n1+2*7') == 10
     assert calc.add('//+%\n1+2%7\n10') == 20
+
+def test_handle_negative_numbers():
+    with pytest.raises(Exception,match = r'negatives not allowed[-3, -4]'):
+        assert calc.add('-3,-4,3')

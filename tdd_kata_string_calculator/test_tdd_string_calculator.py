@@ -40,3 +40,6 @@ def test_multiple_delimiters():
 def test_handle_negative_numbers():
     with pytest.raises(Exception,match = r'negatives not allowed[-3, -4]'):
         assert calc.add('-3,-4,3')
+
+def test_get_called_Count():
+    assert calc.GetCalledCount() == 19

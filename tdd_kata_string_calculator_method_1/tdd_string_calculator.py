@@ -21,7 +21,7 @@ def handle_custom_delimiter(numbers):
             numbers = numberString.replace(customDelimiter,',')
         else:
             for delimiter in delimitersList:
-               numberString = numberString.replace(delimiter,',') 
+                    numberString = numberString.replace(delimiter,',') 
             numbers = numberString
     return numbers
 

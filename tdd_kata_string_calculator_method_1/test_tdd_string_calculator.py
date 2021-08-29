@@ -4,6 +4,9 @@ import pytest
 def test_empty_string():
     assert calc.add('') == 0
 
+def test_get_called_Count():
+    assert calc.GetCalledCount() == 1
+    
 def test_single_number_string():
     assert calc.add('6') == 6
     assert calc.add('0') == 0

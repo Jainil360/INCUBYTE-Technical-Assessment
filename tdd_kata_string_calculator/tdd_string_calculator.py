@@ -1,3 +1,5 @@
 def add(numbers):
     if numbers == '':return 0
-    return int(numbers)
+    else:
+        numbers = map(int, numbers.split(','))
+    return sum(numbers)

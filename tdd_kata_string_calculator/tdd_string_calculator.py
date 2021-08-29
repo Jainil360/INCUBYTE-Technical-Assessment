@@ -4,6 +4,7 @@ def add(numbers):
         numbers = handle_custom_delimiter(numbers)
         numbers = numbers.replace('\n',',')
         numbers = map(int, numbers.split(','))
+        numbers = list(filter(lambda x: x < 1000, numbers))
     return sum(numbers)
 
 def handle_custom_delimiter(numbers):

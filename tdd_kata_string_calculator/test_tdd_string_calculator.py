@@ -18,3 +18,7 @@ def test_multiple_numbers_string():
 def test_new_line_between_numbers_string():
     assert calc.add('1\n2,3') == 6
     assert calc.add('10\n20\n20\n10,20\n20') == 100
+
+def test_different_delimiter():
+    assert calc.add('//;\n1;2') == 3
+    assert calc.add('//;\n1;2;7\n10') == 20
